@@ -19,7 +19,6 @@ jobs:
 
     - name: Install system dependencies
       run: |
-        sudo dpkg --add-architecture i386
         sudo apt-get update
         sudo apt-get install -y \
           build-essential \
@@ -42,10 +41,7 @@ jobs:
           zip \
           autoconf \
           libtool \
-          pkg-config \
-          libncurses5:i386 \
-          libstdc++6:i386 \
-          zlib1g:i386
+          pkg-config
 
     - name: Install Buildozer and Cython
       run: |
