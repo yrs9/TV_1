@@ -59,9 +59,10 @@ jobs:
         pip install --upgrade pip
         pip install --upgrade Cython==0.29.36 buildozer
 
-    - name: Build APK
+    - name: Build APK with Detailed Logs
       run: |
-        buildozer -v android debug
+        # استخدام مستوى تتبع 2 لإظهار سبب الخطأ بدقة في حال حدوثه
+        buildozer -v --profile default android debug || buildozer --log_level=2 android debug
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
