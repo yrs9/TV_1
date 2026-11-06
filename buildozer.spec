@@ -13,4 +13,5 @@ android.api = 31
 android.min_api = 21
 android.sdk = 30
 android.ndk = 25b
-android.skip_update = 0
+android.skip_update = 1
+android.accept_sdk_license = True
